@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Login to Docker Hub
-
+docker login -u cjayanth -p dckr_pat_b7SY8aUaMHV1wGURqY4jQoukKNI
 
 # Variables
 IMAGE_NAME="node-api"
@@ -11,10 +11,6 @@ TAG="latest"
 # Build the Docker image
 echo "Building Docker image..."
 docker build -t ${IMAGE_NAME} .
-
-# Run the Docker container
-echo "Running Docker container..."
-docker run -d -p 80:80 --name ${IMAGE_NAME} ${IMAGE_NAME}
 
 # Tag the Docker image
 echo "Tagging Docker image..."
